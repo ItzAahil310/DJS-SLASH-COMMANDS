@@ -1,17 +1,17 @@
-const discord = require('discord.js');
+const discord = require('discord.js'); //npm i discord.js
 const client = new discord.Client();
 
 client.on('ready', () => {
     console.log('ready');
 
-    client.api.applications(client.user.id).guilds('806140843621613599').commands.post({
+    client.api.applications(client.user.id).guilds('server_id').commands.post({ // your server id
         data: {
             name: "hello",
             description: "Replies with Hello World!"
         }
     });
 
-    client.api.applications(client.user.id).guilds('806140843621613599').commands.post({
+    client.api.applications(client.user.id).guilds('server_id').commands.post({
         data: {
             name: "ping",
             description: "Replies with the bots ping"
